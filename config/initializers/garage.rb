@@ -1,7 +1,8 @@
 Garage.configure {}
 Garage::TokenScope.configure do
-  register :public, desc: 'users' do
+  register :public, desc: 'public scope' do
     access :read, User
+    access :read, Post
   end
 end
 
