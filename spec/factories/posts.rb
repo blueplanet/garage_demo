@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :post do
-    user nil
-title "MyString"
-body "MyText"
+    user
+    sequence(:title) {|n| "post title #{n}"}
+    body { "#{title} \nbody "}
   end
-
 end
